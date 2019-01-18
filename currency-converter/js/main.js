@@ -27,8 +27,7 @@ function getValutes() {
     return;
   }
 
-  let valutes = data.map(one => `<option label="${one.code}" value="${one.value}"></option>`);
-  from.innerHTML = to.innerHTML = valutes.join('');
+  from.innerHTML = to.innerHTML = data.map(one => `<option label="${one.code}" value="${one.value}"></option>`).join('');
 }
 
 function update() {
